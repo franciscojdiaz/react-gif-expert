@@ -14,7 +14,6 @@ export const GifExpertApp = () => {
     const onAddCategory = ( newCategory ) => {
         // el operador spread coloca todos los componentes del array
         //console.log('validando .. ' + newCategory)
-
         if(categories.includes(newCategory)) return;
         setCategories([...categories, newCategory])
     }
@@ -27,24 +26,22 @@ export const GifExpertApp = () => {
 
             {/* input */}
              {/* el setCategories que esta entre las llaves, es la funcion del hook*/} 
-            <AddCategory                 
+                <AddCategory                 
                 //setCategories={ setCategories }
                 onNewCategory = { (event) => onAddCategory(event) }
             
             />            
 
-
-            {/* listado */}
-            
+            {/* listado */}            
             { 
                 // eslint-disable-next-line no-unused-vars
+                // hago desestructuracion de la categoria
                 categories.map( ( category ) => (                         
                     <GifGrid  
-                        key={ category} 
+                        key={ category } 
                         category={ category }
                     /> 
-
-                    ) )
+                ))
             }
                 
                 {/* gif item */}

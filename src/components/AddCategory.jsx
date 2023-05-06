@@ -22,7 +22,6 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     return (
-
         <form onSubmit={ onSumited }>            
             <input
                 type="text"
@@ -31,7 +30,6 @@ export const AddCategory = ({ onNewCategory }) => {
                 //onChange={ (event) => onInputChange(event) }
                 onChange= { onInputChange } 
             />
-
         </form>
         
     )

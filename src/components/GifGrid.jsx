@@ -21,19 +21,18 @@ return (
       }
       
 
-        <div className="card-grid">
+      <div className="card-grid">
           {  // hago desestructuracion de images
             images.map( ( image ) =>(                          
                 <GifItem 
                   key = {image.id}
                   { ...image} // aqui estoy esparciendo todos los props de image
                   /* title = {image.title}
-                  url= {image.url} */
-                
+                  url= {image.url} */                
                 />
             ))
           }
-        </div>        
+      </div>        
     </>        
   )
 }
